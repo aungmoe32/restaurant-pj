@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Menu1</title>
+    <script>
+      tailwind.config = {
+        darkMode: "selector",
+
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FF8811",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @font-face {
+        font-family: "THICCCBOI";
+        src: url("../../thicccboi/fonts/Webfont/THICCCBOI-Regular.woff2") format("woff2");
+        font-weight: 400;
+        /* font-style: normal; */
+      }
+      @font-face {
+        font-family: "THICCCBOI";
+        src: url("../../thicccboi/fonts/Webfont/THICCCBOI-Bold.woff2") format("opentype");
+        font-weight: 700;
+        /* font-style: normal; */
+      }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "THICCCBOI", "Dosis", sans-serif;
+        /* color: black; */
+      }
+    </style>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .img {
+          @apply w-full h-full object-cover  duration-500 relative hover:scale-[1.1];
+        }
+        .box {
+          @apply col-span-2 aspect-square rounded-full overflow-hidden;
+        }
+        /* .cover {
+          @apply absolute text-white flex justify-center items-center bg-black transition-opacity  opacity-0 left-0 top-0 w-full h-full  peer-hover:opacity-50 pointer-events-none;
+        } */
+
+        .hoverImgCover {
+          @apply absolute  text-opacity-0 text-white bg-opacity-0 bg-black flex flex-col justify-center items-center transition-all duration-300 left-0 top-0 w-full h-full peer-hover:bg-opacity-40 peer-hover:text-opacity-100  pointer-events-none;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="relative text-white">
+    <img
+    src="https://images.pexels.com/photos/5971864/pexels-photo-5971864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      class="absolute top-0 left-0 w-full h-full object-cover z-[-2]"
+    >
+      <div
+      class="absolute top-0 left-0 bg-black w-full h-full opacity-80 z-[-1] "
+    ></div>
+    </div>
+    <div class="flex justify-center pt-5 mb-10">
+      <span class="font-bold text-3xl">Shop 1's Menu</span>
+    </div>
+
+    <div class="grid grid-cols-4 md:grid-cols-8 gap-10 items-center mx-5">
+      <div class="col-span-full flex justify-center underline underline-offset-8">Breakfast</div>
+      <div class="md:col-start-2 box relative">
+        <img
+          src="https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt=""
+          class="img peer"
+        />
+        <!-- <div
+          class="bg-white absolute top-5 right-5 text-primary rounded-sm p-1"
+        >
+          $ 3.77
+        </div> -->
+        <div class="hoverImgCover">
+          <div class="w-full h-full flex items-center flex-col justify-center">
+            <div class="text-sm font-bold p-2">Salad Dressing</div>
+            <div class="text-[12px] text-center">
+              Lorem ipsum dolor sit amet consectetur
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <img
+          src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt=""
+          class="img peer"
+        />
+      </div>
+      <div class="col-span-full flex justify-center underline underline-offset-8">Lunch</div>
+      <div class="box">03</div>
+
+      <div class="box">04</div>
+      <div class="box">05</div>
+      <div class="box">06</div>
+      <div class="box">07</div>
+
+      <div class="md:col-start-2 box">08</div>
+      <div class="box">09</div>
+      <div class="box">10</div>
+    </div>
+
+    <!-- <div class="flex flex-col space-y-10">
+      <div class="flex justify-center space-x-10">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2UYMiVoATzVt0dRLwpURWNHlkixUz36n-Q&s"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2UYMiVoATzVt0dRLwpURWNHlkixUz36n-Q&s"
+          alt=""
+        />
+
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2UYMiVoATzVt0dRLwpURWNHlkixUz36n-Q&s"
+          alt=""
+        />
+      </div>
+
+      <div class="flex justify-center space-x-10">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2UYMiVoATzVt0dRLwpURWNHlkixUz36n-Q&s"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2UYMiVoATzVt0dRLwpURWNHlkixUz36n-Q&s"
+          alt=""
+        />
+
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2UYMiVoATzVt0dRLwpURWNHlkixUz36n-Q&s"
+          alt=""
+        />
+
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2UYMiVoATzVt0dRLwpURWNHlkixUz36n-Q&s"
+          alt=""
+        />
+      </div>
+    </div> -->
+    <!-- <div class="menuimgl">
+        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2UYMiVoATzVt0dRLwpURWNHlkixUz36n-Q&s" target="_blank">
+            <img  class="size" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2UYMiVoATzVt0dRLwpURWNHlkixUz36n-Q&s" width="180" height="150" alt="">
+        </a>
+        <div>
+        <h3 class="menu">Nangyi Noodle Salad</h3>
+        <p>Price 2500 kyats</p>
+    
+        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDyZFL9WPMHUXu1sD7ZCSsglin4ktwYOF_g&s" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDyZFL9WPMHUXu1sD7ZCSsglin4ktwYOF_g&s" width="180" height="150" alt="">
+        </a>
+        <div>
+            <h3 class="menu">Shan Noodle Salad</h3>
+            <p>Price 2500 kyats</p>
+        </div>
+    
+        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDyZFL9WPMHUXu1sD7ZCSsglin4ktwYOF_g&s" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDyZFL9WPMHUXu1sD7ZCSsglin4ktwYOF_g&s" width="180" height="150" alt="">
+        </a>
+        <div>
+            <h3 class="menu">Shan Noodle Salad</h3>
+            <p>Price 2500 kyats</p>
+        </div>
+    </div>
+    <div class="menuimgl">
+        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDyZFL9WPMHUXu1sD7ZCSsglin4ktwYOF_g&s" target="_blank">
+            <img  class="size" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDyZFL9WPMHUXu1sD7ZCSsglin4ktwYOF_g&s" width="180" height="150" alt="">
+        </a>
+        <div>
+        <h3 class="menu">Shan Noodle Salad</h3>
+        <p>Price 2500 kyats</p>
+    </div> -->
+  </body>
+</html>
